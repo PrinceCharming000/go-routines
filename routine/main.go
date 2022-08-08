@@ -1,9 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func f(n int) {
-	fmt.Println(n, ":", n)
+	for i := 0; i < 10; i++ {
+		fmt.Println(n, ":", i)
+		amt := time.Duration(rand.Intn(250))
+		time.Sleep(time.Millisecond * amt)
+	}
 }
 
 func main() {
